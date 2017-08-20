@@ -1,18 +1,52 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      username: '',
+      password: '',
+    };
+  }
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="container">
+        <form onSubmit={e => {
+          e.preventDefault(); // prevent page reload when form is submitted
+
+          console.log('state', JSON.stringify(this.state));
+          console.log('submitted');
+        }}>
+          <h1>Fantastisk login-side</h1>
+          <div className="form-group">
+            <label htmlFor="username-input">Brukernavn</label>
+            <input
+              className="form-control"
+              id="username-input"
+              type="text"
+              placeholder="brucewayne1234"
+              onChange={e => this.setState({ username: e.target.value })}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password-input">Passord</label>
+            <input
+                className="form-control"
+                id="password-input"
+                type="password"
+                placeholder="*********"
+                onChange={e => this.setState({ password: e.target.value })}
+            />
+          </div>
+          <button
+            className="btn btn-primary btn-block"
+          >
+            Logg inn!
+          </button>
+        </form>
       </div>
     );
   }
