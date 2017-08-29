@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     index: 1,
     name: 'Bummin\'',
