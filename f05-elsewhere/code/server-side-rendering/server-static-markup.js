@@ -11,4 +11,4 @@ const html = ReactDOMServer.renderToStaticMarkup(
   <MyComponent />
 );
 
-console.log('html', html);
+console.log('html = ', html);
