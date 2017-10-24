@@ -1,0 +1,13 @@
+{
+  "name": "jest-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "jest": "^21.2.1"
+  },
+  "devDependencies": {
+    "supertest": "^3.0.0"
+  }
+}

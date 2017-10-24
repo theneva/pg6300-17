@@ -1,0 +1,12 @@
+{
+  "name": "test-db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
+  "dependencies": {
+    "mongoose": "^4.12.4"
+  }
+}
